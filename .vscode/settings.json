@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "mman.h": "c",
+        "fcntl.h": "c",
+        "availability.h": "c",
+        "stat.h": "c",
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "locale": "cpp",
+        "__config": "cpp"
+    }
+}

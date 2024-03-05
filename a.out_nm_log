@@ -1,0 +1,12 @@
+0000000100008038 d __dyld_private
+0000000100000000 T __mh_execute_header
+                 U _close
+                 U _exit
+                 U _fstat$INODE64
+0000000100008040 S _g_
+                 U _isprint
+0000000100003dc0 T _main
+                 U _mmap
+                 U _open
+                 U _printf
+                 U dyld_stub_binder
