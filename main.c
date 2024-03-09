@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <ctype.h>
+#include <elf.h>
 // void *  mmap(void *, size_t, int, int, int, off_t) __DARWIN_ALIAS(mmap);
 // int     munmap(void *, size_t) __DARWIN_ALIAS(munmap);
 
@@ -73,16 +74,7 @@ int main(int argc, char *argv[])
         // perror("Error mmaping the file");
         exit(EXIT_FAILURE);
     }
-    for (off_t i = 0; i < fs.st_size; i++)
-    {
-        if (isprint(file[i]))
-        {
-            printf("%c", file[i]);
-        }
-        else if (file[i] == '\0')
-            printf("\n");
-        // if (i % fs.st_blksize == 0)
-        //     printf("\n");
-    }
+    Elf64_Ehdr *elf_file = (Elf64_Ehdr *)file;
+    printf("%ul", elf_file->e_shoff);
     return 0;
 }
